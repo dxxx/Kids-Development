@@ -224,3 +224,37 @@ Behind an adult gate (hold 3 seconds, then answer a sum like 6 + 7).
 - exact arithmetic level: found by placement in the first session
 - recorded parent voice or generated voice long term
 - art style: flat and bright, decided when the first screens are drawn
+
+---
+
+## 13. Interaction principles (from docs/RESEARCH_ENGAGEMENT.md)
+
+Added after researching engagement for a child who may have autistic traits,
+follows instructions in games but does not like answering people.
+
+1. **Questions when engaged, jobs when not.** Every mini-game has a job form
+   ("The truck needs 8 tires") and a question form ("How many tires?").
+   New or harder content always starts as a job. Questions are used on a run
+   of successes. After a miss or an early exit, the next round is a job.
+2. **Nobody is waiting.** No timers, no nagging, no "are you still there".
+   Silence is fine.
+3. **Wrong is "not yet".** Wrong pieces slide back, no failure sound, no red
+   X. Two misses: a hint fades in. Three misses: the job simplifies.
+4. **Choice everywhere.** Next stop, crew member, car, colour, and the right
+   to leave a mini-game by tapping the car with no penalty.
+5. **Same layout every time.** Scene in the middle, car button bottom left,
+   job shown as a picture plus one short line at the top. Soft sounds, no
+   sudden effects, sound and motion reducible in the parent corner.
+6. **Discover first, name later.** New ideas arrive as puzzles solved by
+   trying. Words and symbols are shown afterwards, never asked about first.
+7. **Interests on the surface, skills underneath.** Cars and animals in
+   every scene, rotated so no theme wears out.
+8. **Reading track is comprehension only.** Follow written instructions, act
+   on a sentence, order a story, match text to picture. No letter drills.
+9. **A bridge to people.** The crew narrates ("I see three red cars") rather
+   than interrogates. Later, a tap lets him choose a line to "say" back.
+   The parent corner suggests one shared activity after a session, phrased
+   as something to do together, not a question to answer.
+10. **Watch engagement, not scores.** The parent corner shows early exits,
+    time after a hint, repeated game choices, and session length versus
+    difficulty.
