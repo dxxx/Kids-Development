@@ -1,0 +1,14 @@
+{
+  "name": "Animal Rally",
+  "short_name": "Rally",
+  "description": "A logic, maths and reading road trip for young kids.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fdf8ec",
+  "theme_color": "#2f8f6b",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

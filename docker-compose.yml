@@ -1,0 +1,11 @@
+services:
+  animal-rally:
+    build:
+      context: .
+      args:
+        REGISTRY: ${REGISTRY:-docker.io/library}
+    image: animal-rally:latest
+    container_name: animal-rally
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8080}:80"
