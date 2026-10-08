@@ -100,4 +100,5 @@ save or load progress as a file.
 - `docs/GAME_DESIGN.md`: the concept, core loop and interaction principles
 - `docs/RESEARCH_ENGAGEMENT.md`: research on engagement and autistic traits
 - `docs/RESEARCH_UK_YEAR1_YEAR2.md`: the curriculum and the level ladder
+- `docs/RESEARCH_GAME_IDEAS.md`: evidence on game types and the ranked roadmap
 - `docs/ARCHITECTURE.md`: how the code is organised

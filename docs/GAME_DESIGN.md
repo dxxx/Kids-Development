@@ -279,3 +279,16 @@ the tables. Two rules from the research:
 Day one placement for the first player: number level 4, addition level 3,
 multiplication level 1, measurement level 2, shape level 1, reading level 3,
 grammar level 1. The adaptive system moves each track from there.
+
+
+---
+
+## 15. Next games (from docs/RESEARCH_GAME_IDEAS.md)
+
+Rule from the research: practise the target skill directly. Thinking-skill
+games improve thinking skills but do not spill over into maths or reading.
+
+Build order: Number Road Rally (linear number road, counting on), Program the
+Car (sequencing, loops, debugging), Story Road (comprehension), Shape Garage
+(spatial), then Fair Share Market, Balance Bridge, Convoy Memory, Traffic
+Lights. No streaks, daily lures, countdowns or guilt from characters.
