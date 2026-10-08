@@ -258,3 +258,24 @@ follows instructions in games but does not like answering people.
 10. **Watch engagement, not scores.** The parent corner shows early exits,
     time after a hint, repeated game choices, and session length versus
     difficulty.
+
+
+---
+
+## 14. Level ladder (from docs/RESEARCH_UK_YEAR1_YEAR2.md)
+
+Content levels follow the England national curriculum for Year 1 and Year 2,
+sequenced the way White Rose Maths orders it term by term, with the end of
+Key Stage 1 "expected" and "greater depth" standards as the top rungs. Each
+skill track has its own ladder; see section 8 of the research document for
+the tables. Two rules from the research:
+
+- **Depth before acceleration.** A child who is ahead gets richer problems
+  inside Year 1 and 2 content (find all of them, is it always true, what if)
+  before any Year 3 content appears.
+- **One White Rose small step is one mini-game level.** That is the
+  granularity the data files should use.
+
+Day one placement for the first player: number level 4, addition level 3,
+multiplication level 1, measurement level 2, shape level 1, reading level 3,
+grammar level 1. The adaptive system moves each track from there.
