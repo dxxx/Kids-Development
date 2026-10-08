@@ -1,12 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { applyOutcome, chooseMode, outcomeFor } from '../core/adaptive';
-import { t, UI } from '../core/i18n';
+import { CREW, STOPS, t, UI } from '../core/i18n';
+import { photo } from '../core/photos';
 import { createRng, randomSeed } from '../core/rng';
 import type { Profile } from '../core/store';
 import { planTrip, ROUNDS_PER_GAME } from '../core/trip';
 import type { MiniGame, Mode } from '../core/types';
 import { speak } from '../core/voice';
 import { GAMES, trackMax } from '../games';
+import { Pic } from './Pic';
+import { sceneStyle } from './PitStop';
 
 interface Round {
   game: MiniGame;
@@ -111,7 +114,7 @@ export function Trip({
 
   const Game = round.game.Component;
   return (
-    <div className="screen trip">
+    <div className="screen trip scene" style={sceneStyle(photo(STOPS[profile.progress.stop % STOPS.length].photo))}>
       <div className="instruction">
         <span className="instruction-game">{round.game.emoji}</span>
         <p>{instruction}</p>
@@ -139,7 +142,11 @@ export function Trip({
 
       {cheer && (
         <div className="cheer">
-          <div className="cheer-crew">🦁🦓🦛🐒🦜</div>
+          <div className="cheer-crew">
+            {CREW.slice(0, Math.min(5, profile.progress.crew)).map((c) => (
+              <Pic key={c.photo} id={c.photo} emoji={c.emoji} className="cheer-pic" alt="" />
+            ))}
+          </div>
           <div className="cheer-text">{cheer}</div>
         </div>
       )}

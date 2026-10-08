@@ -1,5 +1,6 @@
 import type { GameProps, Lang, MiniGame, Mode } from '../../core/types';
 import { speak } from '../../core/voice';
+import { Pic } from '../../screens/Pic';
 import { Choices, fill } from '../shared';
 import { LANG_NAMES } from './data';
 import { generateWords, WORDS_MAX_LEVEL, type WordsPuzzle } from './generate';
@@ -23,7 +24,7 @@ function WordsGame({ puzzle, misses, onAttempt }: GameProps<WordsPuzzle>) {
     <div className="words-game">
       <button className="word-card" onClick={() => speak(source, puzzle.from)} aria-label="hear the word">
         <span className="parrot">🦜</span>
-        {puzzle.showEmoji && <span className="word-emoji">{puzzle.word.emoji}</span>}
+        {puzzle.showEmoji && <Pic id={`word-${puzzle.word.text.en}`} emoji={puzzle.word.emoji} className="word-pic" alt="" />}
         <span className="word-text">{source}</span>
         <span className="word-speaker">🔊</span>
       </button>

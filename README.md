@@ -6,7 +6,7 @@ three-language mini-games. Content follows the England Year 1 and Year 2
 curriculum and adapts to the child, one skill at a time.
 
 Version 0.1: the engine, four mini-games, pit stops, a daily time limit and a
-grown-ups corner. Art is placeholder emoji for now.
+grown-ups corner. Real photos plug in through `npm run photos`; emoji are the fallback.
 
 ## Run it with Docker
 
@@ -65,6 +65,23 @@ npm run dev        # http://localhost:5173
 npm test           # unit tests for the engine and puzzle generators
 npm run build      # type check and production build into dist/
 ```
+
+## Photos
+
+The game uses real, openly licensed photos from Wikimedia Commons for the crew,
+the map stops, scene backgrounds and the word game. Until they are downloaded it
+shows emoji instead, so it always works.
+
+```bash
+npm run photos                        # download every photo listed in scripts/photos.json
+npm run photos -- --dry               # show which files would be used
+npm run photos -- --pick 2 crew-lion  # swap one photo for the 3rd search result
+```
+
+Only CC0, public domain, CC BY and CC BY-SA files are accepted. Author and
+licence for each are saved to `src/content/credits.json` and shown in the
+grown-ups corner, which is what those licences require. Commit `public/img/`
+and the credits file so the Docker build includes them.
 
 ## Install on the tablet
 

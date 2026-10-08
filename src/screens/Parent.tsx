@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from 'react';
 import { LADDER } from '../core/ladder';
+import { CREDITS } from '../core/photos';
 import { defaultProfile, minutesToday, parseProfile, type Profile } from '../core/store';
 import { LANGS, type Lang, type TrackId } from '../core/types';
 import { trackMax } from '../games';
@@ -172,6 +173,24 @@ export function Parent({ profile, update, onClose }: { profile: Profile; update:
               ))}
             </tbody>
           </table>
+        )}
+      </section>
+
+      <section>
+        <h2>Photo credits</h2>
+        {Object.keys(CREDITS).length === 0 ? (
+          <p className="muted">No photos downloaded yet; the game shows emoji instead.</p>
+        ) : (
+          <ul className="credits">
+            {Object.entries(CREDITS).map(([id, c]) => (
+              <li key={id}>
+                <a href={c.source} target="_blank" rel="noreferrer">
+                  {c.file.replace(/^File:/, '')}
+                </a>{' '}
+                by {c.author}, {c.licenceUrl ? <a href={c.licenceUrl} target="_blank" rel="noreferrer">{c.licence}</a> : c.licence}
+              </li>
+            ))}
+          </ul>
         )}
       </section>
 

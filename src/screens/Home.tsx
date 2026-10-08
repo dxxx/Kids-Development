@@ -1,6 +1,7 @@
 import { CREW, STOPS, t, UI } from '../core/i18n';
 import type { Profile } from '../core/store';
 import { HoldButton } from './HoldButton';
+import { Pic } from './Pic';
 
 export function Home({ profile, onGo, onParent }: { profile: Profile; onGo: () => void; onParent: () => void }) {
   const lang = profile.settings.lang;
@@ -17,7 +18,7 @@ export function Home({ profile, onGo, onParent }: { profile: Profile; onGo: () =
       <div className="map">
         {STOPS.map((s, i) => (
           <div key={i} className={`stop ${i === stop ? 'stop-here' : ''} ${i < stop ? 'stop-done' : ''}`}>
-            <span className="stop-emoji">{s.emoji}</span>
+            <Pic id={s.photo} emoji={s.emoji} className="stop-pic" alt={s.name.en} />
             {i === stop && (
               <span className="stop-car" style={{ color: profile.progress.carColour }}>
                 🚙
@@ -34,10 +35,8 @@ export function Home({ profile, onGo, onParent }: { profile: Profile; onGo: () =
 
       <div className="crew">
         <span className="crew-label">{t(UI.garage, lang)}</span>
-        {CREW.slice(0, profile.progress.crew).map((c, i) => (
-          <span key={i} className="crew-member">
-            {c}
-          </span>
+        {CREW.slice(0, profile.progress.crew).map((c) => (
+          <Pic key={c.photo} id={c.photo} emoji={c.emoji} className="crew-member" alt={t(c.name, lang)} />
         ))}
       </div>
     </div>
